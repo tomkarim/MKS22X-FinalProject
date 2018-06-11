@@ -10,7 +10,7 @@ public class Game {
     public Dimension size;
     public Point2D scale;
 
-    public ArrayList<Actor> actors = new ArrayList<>();
+    public List<Actor> actors = new ArrayList<Actor>();
 
     public void initialize() {
     }
@@ -40,5 +40,16 @@ public class Game {
             }
         }
         return null;
+    }
+    public void broadcastMessage(String message) {
+        for (Actor obj : actors) {
+            try {
+                Method method = obj.getClass().getMethod(message);
+                if (method != null) {
+                    method.invoke(obj);
+                }
+            } catch (Exception ex) {
+            }
+        }
     }
 }

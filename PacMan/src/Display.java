@@ -12,7 +12,7 @@ public class Display extends Canvas{
         int sx = (int) (game.screenSize.width * game.screenScale.getX());
         int sy = (int) (game.screenSize.height * game.screenScale.getY());
         setPreferredSize(new Dimension(sx, sy));
-        addKeyListener(new Keyboard());
+        addKeyListener(new KeyListener());
     }
 
     public void start() {
