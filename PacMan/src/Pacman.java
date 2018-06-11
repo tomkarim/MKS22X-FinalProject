@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.geom.Point2D;
+
 public class Pacman extends Game {
     public int maze[][] = {
             {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -49,8 +52,8 @@ public class Pacman extends Game {
     public int currentFoodCount;
 
     public Pacman() {
-        screenSize = new Dimension(224, 288);
-        screenScale = new Point2D.Double(2, 2);
+        size = new Dimension(224, 288);
+        scale = new Point2D.Double(2, 2);
     }
 
     public State getState() {
