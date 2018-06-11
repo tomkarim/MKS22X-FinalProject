@@ -11,7 +11,7 @@ public class PacmanActor extends InitActor{
     public int dy;
     public long diedTime;
 
-    public Pacman(Pacman game) {
+    public PacmanActor(Pacman game) {
         super(game);
     }
 

@@ -1,11 +1,11 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Titulo extends InitActor{
+public class Title extends InitActor{
 
     private boolean pushSpaceToStartVisible;
 
-    public Titulo(Pacman game) {
+    public Title(Pacman game) {
         super(game);
     }
 

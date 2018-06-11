@@ -93,7 +93,7 @@ public class Pacman extends Game {
     }
 
     private void addAllObjs() {
-        Pacman pacman = new Pacman(this);
+        PacmanActor pacman = new PacmanActor(this);
         actors.add(new Initializer(this));
         actors.add(new Title(this));
         actors.add(new Background(this));
@@ -101,16 +101,16 @@ public class Pacman extends Game {
         for (int row=0; row<31; row++) {
             for (int col=0; col<36; col++) {
                 if (maze[row][col] == 1) {
-                    maze[row][col] = -1; // wall convert to -1 for ShortestPathFinder
+                    maze[row][col] = -1;
                 }
                 else if (maze[row][col] == 2) {
                     maze[row][col] = 0;
-                    actors.add(new Food(this, col, row));
+                    actors.add(new Dots(this, col, row));
                     foodCount++;
                 }
                 else if (maze[row][col] == 3) {
                     maze[row][col] = 0;
-                    actors.add(new PowerBall(this, col, row));
+                    actors.add(new MoreDots(this, col, row));
                 }
             }
         }

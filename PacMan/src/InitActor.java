@@ -1,3 +1,4 @@
+
 public class InitActor extends Actor<Pacman> {
     public InitActor(Pacman game){
         super(game);

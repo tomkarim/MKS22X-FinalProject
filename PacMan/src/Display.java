@@ -10,8 +10,8 @@ public class Display extends Canvas{
 
     public Display(Game game) {
         this.game = game;
-        int sx = (int) (game.screenSize.width * game.screenScale.getX());
-        int sy = (int) (game.screenSize.height * game.screenScale.getY());
+        int sx = (int) (game.size.width * game.scale.getX());
+        int sy = (int) (game.size.height * game.scale.getY());
         setPreferredSize(new Dimension(sx, sy));
         addKeyListener(new KeyListener());
     }
@@ -52,7 +52,7 @@ public class Display extends Canvas{
                     Graphics2D graph = (Graphics2D) bs.getDrawGraphics();
                     graph.setBackground(Color.BLACK);
                     graph.clearRect(0, 0, getWidth(), getHeight());
-                    graph.scale(game.screenScale.getX(), game.screenScale.getY());
+                    graph.scale(game.scale.getX(), game.scale.getY());
                     draw(graph);
                     graph.dispose();
                     bs.show();

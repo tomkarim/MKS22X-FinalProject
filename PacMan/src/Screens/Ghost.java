@@ -28,13 +28,13 @@ public class Ghost extends InitActor {
     public long vulnerableModeStartTime;
     public boolean markAsVulnerable;
 
-    public ShortestPathFinder pathFinder;
+    public MMF pathFinder;
 
     public Ghost(Pacman game, PacmanActor pacman, int type) {
         super(game);
         this.pacman = pacman;
         this.type = type;
-        this.pathFinder = new ShortestPathFinder(game.maze);
+        this.pathFinder = new MMF(game.maze);
     }
 
     private void setMode(Mode mode) {
@@ -237,7 +237,7 @@ public class Ghost extends InitActor {
     private class PacmanCaughtAction implements Runnable {
         @Override
         public void run() {
-            game.setState(State.PACMAN_DIED);
+            game.setState(Pacman.State.PACMAN_DIED);
         }
     }
 

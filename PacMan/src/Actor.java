@@ -26,7 +26,7 @@ public class Actor<Typ extends Game> {
         this.game = game;
     }
 
-    public void init() {
+    public void initialize() {
     }
 
     public void update() {

@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class MoreDots InitActor{
+public class MoreDots extends InitActor{
     private int col;
     private int row;
     private boolean eated;

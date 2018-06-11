@@ -1,5 +1,4 @@
 import java.awt.*;
-import PacmanActor; 
 
 public class Points extends InitActor{
 
@@ -70,6 +69,4 @@ public class Points extends InitActor{
 
 }
 
-    
-}
 
