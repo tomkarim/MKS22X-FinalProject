@@ -48,7 +48,7 @@ public class Pacman extends Game {
     public int foodCount;
     public int currentFoodCount;
 
-    public PacmanGame() {
+    public Pacman() {
         screenSize = new Dimension(224, 288);
         screenScale = new Point2D.Double(2, 2);
     }
@@ -179,4 +179,4 @@ public class Pacman extends Game {
 
 
 
-}
+
