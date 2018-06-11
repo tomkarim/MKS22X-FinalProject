@@ -29,7 +29,6 @@ public class HUD extends InitActor {
     @Override
     public void stateChanged() {
         visible = (game.state != Pacman.State.INITIALIZING)
-                && (game.state != Pacman.State.OL_PRESENTS);
     }
 
 }
